@@ -38,13 +38,14 @@ public class RentFilmDAO extends DAO<RentFilm> {
                             .prepareStatement(
                                     "insert into locacao "
                                             + "(id_cliente, "
-                                            + "id_filme, data_locacao) "
-                                            + "values (?, ?, ?)"
+                                            + "id_filme, data_locacao, data_devolucao) "
+                                            + "values (?, ?, ?, ?)"
                                     , Statement.RETURN_GENERATED_KEYS);
 
             prepare.setInt(1, obj.getId_cliente());
             prepare.setInt(2, obj.getId_filme());
             prepare.setDate(3, new java.sql.Date(obj.getData_locacao().getTime()));
+            prepare.setDate(4, new java.sql.Date(obj.getData_devolucao().getTime()));
 
 
             prepare.executeUpdate();

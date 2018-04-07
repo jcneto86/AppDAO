@@ -4,19 +4,20 @@
  * and open the template in the editor.
  */
 package Dados;
+import java.util.Date;
 
 public class RentFilm
 {
     private int id_locacao;
     private int id_cliente;
     private int  id_filme;
-    private java.sql.Date data_locacao;
-    private java.sql.Date data_devolucao;
+    private Date data_locacao;
+    private Date data_devolucao;
 
     public RentFilm() {
     }
 
-    public RentFilm(int id_locacao, int id_cliente, int id_filme, java.sql.Date data_locacao, java.sql.Date data_devolucao) {
+    public RentFilm(int id_locacao, int id_cliente, int id_filme, Date data_locacao, Date data_devolucao) {
         this.id_locacao = id_locacao;
         this.id_cliente = id_cliente;
         this.id_filme = id_filme;
@@ -48,19 +49,19 @@ public class RentFilm
         this.id_filme = id_filme;
     }
 
-    public java.sql.Date getData_locacao() {
+    public Date getData_locacao() {
         return data_locacao;
     }
 
-    public void setData_locacao(java.sql.Date data_locacao) {
+    public void setData_locacao(Date data_locacao) {
         this.data_locacao = data_locacao;
     }
 
-    public java.sql.Date getData_devolucao() {
+    public Date getData_devolucao() {
         return data_devolucao;
     }
 
-    public void setData_devolucao(java.sql.Date data_devolucao) {
+    public void setData_devolucao(Date data_devolucao) {
         this.data_devolucao = data_devolucao;
     }
 
